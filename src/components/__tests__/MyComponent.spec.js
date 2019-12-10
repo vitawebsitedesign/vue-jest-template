@@ -3,13 +3,13 @@ import Vue from 'vue';
 import MyComponent from '../MyComponent';
 
 describe('MyComponent', () => {
-  test('should initially show default msg', () => {
+  test('should initially show default message', () => {
     const wrapper = shallowMount(MyComponent);
     const expected = 'default msg'.toUpperCase();
     expect(wrapper.find('div.msg').text()).toBe(expected);
   });
 
-  test('should display msg', () => {
+  test('should display textbox value as message', () => {
     const name = 'Sanna Marin';
     const wrapper = shallowMount(MyComponent);
     wrapper.setData({
