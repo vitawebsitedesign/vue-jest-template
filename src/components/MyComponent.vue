@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="msg">{{ (msg || 'default msg') | uppercase }}</div>
-        <input type="text" v-model="msg">
-        <button id="btnReset" type="button" @click="resetMsg">reset message</button>
+        <div class="name">{{ (name || 'please enter a lead name...') | uppercase }}</div>
+        <input type="text" v-model="name">
+        <button id="btnReset" type="button" @click="resetName">reset name</button>
     </div>
 </template>
 
@@ -11,15 +11,15 @@ export default {
     name: 'MyComponent',
     data: function() {
         return {
-            msg: null
+            name: null
         };
     },
     created: function() {
-        this.resetMsg();
+        this.resetName();
     },
     methods: {
-        resetMsg: function() {
-            this.msg = null
+        resetName: function() {
+            this.name = null
         }
     },
     filters: {
